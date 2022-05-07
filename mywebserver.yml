@@ -4,13 +4,14 @@
   tasks:
   - name: install webserver on ubuntu
     apt:
-      name: "{{mywebpackonubuntu}}"
+      name: "{{webpackonubuntu}}"
       state: present
     when: ansible_os_family=="Debian"
 
   - name: start webserver on ubuntu
     service:
-      name: "{{mywebpackonubuntu}}"
+
+      name: "{{webpackonubuntu}}"
       state: restarted
     when: ansible_os_family=="Debian"
 
